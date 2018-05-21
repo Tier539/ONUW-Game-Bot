@@ -1,18 +1,10 @@
-/*
-  A ping pong bot, whenever you send "ping", it replies "pong".
-*/
 
-// Import the discord.js module
 const Discord = require('discord.js');
 
-// Create an instance of a Discord client
 const client = new Discord.Client();
 
-// The token of your bot - https://discordapp.com/developers/applications/me
 const token = 'NDQ2ODAxMzMzNzE5NDAwNDUw.Dd-ZBg.mD4MZQum5rtF4kfoLF8nRU6uRhE';
 
-// The ready event is vital, it means that your bot will only start reacting to information
-// from Discord _after_ ready is emitted
 client.on('ready', () => {
   console.log('I am ready!');
 });
@@ -122,14 +114,14 @@ client.on('message', message => {
 			userobj.send(args[i]+' : You are ' + ChosenRoles[i] + '\n' + pms[pmnum]);
 		}
 		
-		//message.author.send('Face Up: ' + ChosenRoles.toString() + ' ||| Face Down: ' + FaceDown.toString());
+		
 
 
 		msgtext += '\nFace down cards are:\n' + FaceDown[0]+ '\n' + FaceDown[1] + '\n' + FaceDown[2];
 		message.author.send(msgtext+'\n\n'+msgtext2);
-		//message.channel.send(msgtext2);
 		
-		let gameon = 1;
+		
+		
 
      }
 		} else if (message.content.substring(0, 8) === '!results'){
