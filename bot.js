@@ -9,18 +9,16 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
-// Create an event listener for messages
+
 client.on('message', message => {
-  // If the message is "ping"
+ 
   if (message.content.substring(0, 5) === '!game') {
-    // Send "pong" to the same channel
-    //message.channel.send('pong');
+
 	
 	var args = message.content.substring(1).split(' ');
-		//let mems = MessageMentions.users;
-		//console.log(mems);
+
         var cmd = args[0];
-		//message.channel.send(args);
+
 		args = args.splice(1);
 		var numcmd = args.length;
 		shuffle(args);
@@ -135,22 +133,22 @@ client.on('message', message => {
   
 });
 
-// Log our bot in
+
 client.login(token);
 
 
 function shuffle(array) {
     let counter = array.length;
 
-    // While there are elements in the array
+
     while (counter > 0) {
-        // Pick a random index
+
         let index = Math.floor(Math.random() * counter);
 
-        // Decrease counter by 1
+
         counter--;
 
-        // And swap the last element with it
+
         let temp = array[counter];
         array[counter] = array[index];
         array[index] = temp;
