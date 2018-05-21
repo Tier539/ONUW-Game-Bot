@@ -1,7 +1,7 @@
 {
-  "name": "greeter-bot",
+  "name": "ONUW Game Bot",
   "version": "1.0.0",
-  "description": "My own Discord bot",
+  "description": "ONUW Game Bot",
   "main": "bot.js",
   "author": "Tier",
   "dependencies": {
